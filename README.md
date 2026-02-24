@@ -1,95 +1,62 @@
-🏠 AI Real Estate Quiz Bot (RAG-Based)
-📌 Overview
+🔹 Overview
 
-This project is an AI-powered Real Estate Quiz Bot built using:
-Streamlit for the frontend
-Google Gemini API for question generation and evaluation
-Sentence Transformers for embeddings
-Vector Database (FAISS/Chroma) for semantic retrieval
-The system uses a Retrieval-Augmented Generation (RAG) approach to generate context-aware quiz questions based on property listings.
+The AI-Powered Real Estate Quiz Bot is an intelligent learning system designed to generate context-aware real estate questions using Large Language Models (LLMs) combined with semantic vector search.
 
+The application leverages Retrieval-Augmented Generation (RAG) architecture to enhance question relevance and reduce hallucination by grounding responses in real property data.
 
-🚀 Features: 
-🧠 AI-generated real estate questions
-📚 Context-aware question generation using vector search
-✍️ User answer evaluation
-🔎 Semantic similarity-based retrieval
-📝 Multi-question quiz flow with “Next Question” option
+The system is built using Streamlit for the user interface, Google Gemini API for natural language generation, and a vector database for semantic retrieval.
 
+🚀 Key Features
 
-🏗️ How It Works (Architecture)
+AI-generated real estate quiz questions
 
-The system follows a Retrieval-Augmented Generation (RAG) pipeline:
+Context-aware question generation using vector search
 
-1️⃣ Property listings (from housing.csv) are converted into embeddings.
-2️⃣ Embeddings are stored in a vector database.
-3️⃣ When a quiz starts:
+Intelligent answer evaluation
 
-Relevant property data is retrieved using similarity search.
+Multi-question quiz flow
 
-The retrieved context is passed to the Gemini model.
-4️⃣ The LLM generates a question based on the retrieved property data.
-5️⃣ The user submits an answer.
-6️⃣ The system evaluates and provides feedback.
+Optimized API usage
 
-🔄 Workflow
+RAG-based architecture implementation
 
-User → Query → Vector Search → Retrieved Property Context → Gemini LLM → Question → User Answer → Evaluation
-
-📂 Project Structure
-project/
-│
-├── app.py                # Streamlit application
-├── vector_db.py          # Vector database setup and search
-├── housing.csv           # Property dataset
-├── requirements.txt
-🛠️ Installation
-
-1️⃣ Clone the Repository
-git clone <your-repo-link>
+🛠 Installation & Setup
+Step 1: Clone Repository
+git clone <repository-link>
 cd project-folder
-2️⃣ Create Virtual Environment
+Step 2: Create Virtual Environment
 python -m venv venv
 venv\Scripts\activate
-3️⃣ Install Dependencies
+Step 3: Install Dependencies
 pip install -r requirements.txt
-4️⃣ Set API Key
+Step 4: Set API Key
 
 Windows:
-set GEMINI_API_KEY=your_api_key_here
+
+set GEMINI_API_KEY=your_api_key
 
 Mac/Linux:
-export GEMINI_API_KEY=your_api_key_here
 
-5️⃣ Run the App
+export GEMINI_API_KEY=your_api_key
+Step 5: Run Application
 streamlit run app.py
+🏗 Project Structure
+project/
+│
+├── app.py
+├── vector_db.py
+├── housing.csv
+├── requirements.txt
+└── README.md
 
 🔍 Technologies Used
+
 Python
+
 Streamlit
+
 Google Gemini (google-genai SDK)
+
 SentenceTransformers (all-MiniLM-L6-v2)
-FAISS / Chroma
 
-🎯 Purpose of the Project
-This project demonstrates:
-Integration of LLM APIs
-Implementation of semantic vector search
-Building a basic RAG pipeline
-Optimizing API calls
-Developing an interactive AI-based quiz system
-
-
-📈 Future Improvements
-Add performance tracking
-Improve UI styling
-Deploy to cloud
-Add authentication
-Generate quiz reports
-
-
-🧠 Learning Outcomes
-Through this project, I learned:
-How vector databases improve LLM accuracy
-How to implement Retrieval-Augmented Generation
-How to structure an AI-powered application
+FAISS / Chroma Vector Database
