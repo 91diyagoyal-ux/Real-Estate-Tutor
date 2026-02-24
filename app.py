@@ -7,7 +7,7 @@ from vector_db import search_property
 # CONFIGURE GEMINI
 # ==========================
 
-genai.configure(api_key="AIzaSyBZs0DmkF1xkQmMmPjduUb6VOpPIXdTwzw")
+genai.configure(api_key="API KEY Here")
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 # ==========================
@@ -154,4 +154,5 @@ if st.session_state.current_property:
 
     if st.session_state.evaluation_done:
         st.markdown("### 📊 Evaluation")
+
         st.write(st.session_state.last_result)
